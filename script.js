@@ -8,14 +8,14 @@ javascript:(function(){
     let turnNode=document.evaluate(turn,document,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue;
 
     let damageText=damageNode?damageNode.innerText.trim():"";
-    let timeText=timeNode?titeNode.innerText.trim():"";
+    let timeText=timeNode?timeNode.innerText.trim():"";
     let turnText=turnNode?turnNode.innerText.trim():"";
 
     if(damageText != "" && timeText != "" && turnText != ""){
         let damageInt = parseInt(damageText.replace(/,/g, ""), 10);
 
         let timeParts = timeText.split(":");
-        let timeSeconds = parseInt(timeParst[0], 10) * 60 + parseInt(timeParts[1], 10);
+        let timeSeconds = parseInt(timeParts[0], 10) * 60 + parseInt(timeParts[1], 10);
 
         let turnInt = parseInt(turnText, 10);
         
